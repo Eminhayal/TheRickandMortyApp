@@ -58,16 +58,72 @@
 		FA0402D026AB01B5000136AD /* TheRickandMortyApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA0402D126AB01B5000136AD /* AppDelegate.swift */,
-				FA0402D326AB01B5000136AD /* SceneDelegate.swift */,
-				FA0402D526AB01B5000136AD /* ViewController.swift */,
-				FA0402D726AB01B5000136AD /* Main.storyboard */,
-				FA0402DD26AB01BA000136AD /* Assets.xcassets */,
-				FA0402DF26AB01BA000136AD /* LaunchScreen.storyboard */,
+				FA0402EE26AB042B000136AD /* Model */,
+				FA0402ED26AB0423000136AD /* ViewModel */,
+				FA0402EC26AB041D000136AD /* View */,
+				FA0402EB26AB0414000136AD /* Resource */,
+				FA0402EA26AB040C000136AD /* Extension */,
+				FA0402E926AB03E5000136AD /* AppDetails */,
+				FA0402E826AB0388000136AD /* Service */,
 				FA0402E226AB01BA000136AD /* Info.plist */,
 				FA0402DA26AB01B5000136AD /* TheRickandMortyApp.xcdatamodeld */,
 			);
 			path = TheRickandMortyApp;
+			sourceTree = "<group>";
+		};
+		FA0402E826AB0388000136AD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FA0402E926AB03E5000136AD /* AppDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FA0402D326AB01B5000136AD /* SceneDelegate.swift */,
+				FA0402D126AB01B5000136AD /* AppDelegate.swift */,
+				FA0402D726AB01B5000136AD /* Main.storyboard */,
+				FA0402DD26AB01BA000136AD /* Assets.xcassets */,
+				FA0402DF26AB01BA000136AD /* LaunchScreen.storyboard */,
+				FA0402D526AB01B5000136AD /* ViewController.swift */,
+			);
+			path = AppDetails;
+			sourceTree = "<group>";
+		};
+		FA0402EA26AB040C000136AD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FA0402EB26AB0414000136AD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FA0402EC26AB041D000136AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA0402ED26AB0423000136AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA0402EE26AB042B000136AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
