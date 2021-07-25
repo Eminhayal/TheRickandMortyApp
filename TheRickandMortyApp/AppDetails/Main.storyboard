@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KwC-OR-paq">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bölümler-->
+        <scene sceneID="xgR-8S-wgy">
+            <objects>
+                <viewController storyboardIdentifier="EpidoseVC" id="hqg-gr-Q7q" customClass="EpidoseVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EuY-zC-o2a">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3rj-Z3-aFM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bölümler" image="epidose" selectedImage="epidose" id="MDh-4G-BXZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OpQ-Nn-75b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155" y="342"/>
+        </scene>
+        <!--Konumlar-->
+        <scene sceneID="7tb-v9-8Ix">
+            <objects>
+                <viewController storyboardIdentifier="LocationVC" id="vj1-8m-ouN" customClass="LocationVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J0Z-yi-Ct7">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GgR-Hl-Fag"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Konumlar" image="location" selectedImage="location" id="K1p-Ma-6Jf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNL-em-8fu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1243" y="739"/>
+        </scene>
+        <!--Karakterler-->
+        <scene sceneID="jPY-m9-ohy">
+            <objects>
+                <viewController storyboardIdentifier="CharacterVC" id="KcO-aY-Gq1" customClass="CharacterVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QvK-eF-PYN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VLS-NH-41o">
+                                <rect key="frame" x="0.0" y="110" width="390" height="651"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="651" id="qBl-1u-2yw"/>
+                                </constraints>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uFU-7R-gci">
+                                <rect key="frame" x="0.0" y="59" width="390" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="GDV-2k-Sou"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9IJ-8j-ug6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="leading" secondItem="9IJ-8j-ug6" secondAttribute="leading" id="30f-JX-G1t"/>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="trailing" secondItem="9IJ-8j-ug6" secondAttribute="trailing" id="9jz-Ms-lW4"/>
+                            <constraint firstItem="uFU-7R-gci" firstAttribute="trailing" secondItem="9IJ-8j-ug6" secondAttribute="trailing" id="Adp-r7-WLp"/>
+                            <constraint firstItem="uFU-7R-gci" firstAttribute="centerX" secondItem="9IJ-8j-ug6" secondAttribute="centerX" id="HcF-hH-rai"/>
+                            <constraint firstItem="uFU-7R-gci" firstAttribute="leading" secondItem="9IJ-8j-ug6" secondAttribute="leading" id="Md1-ek-iWs"/>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="bottom" secondItem="9IJ-8j-ug6" secondAttribute="bottom" id="ZXh-sb-7Ng"/>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="centerX" secondItem="9IJ-8j-ug6" secondAttribute="centerX" id="aT5-7i-Pfg"/>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="top" secondItem="uFU-7R-gci" secondAttribute="bottom" id="cVm-ZP-lQL"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Karakterler" image="character" landscapeImage="character" id="42G-1J-Xsu">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="characterTableView" destination="VLS-NH-41o" id="sVy-sm-6ht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EW-il-yRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155.38461538461539" y="-331.27962085308053"/>
+        </scene>
+        <!--Hakkında-->
+        <scene sceneID="m78-ph-3nq">
+            <objects>
+                <viewController storyboardIdentifier="InfoVC" id="Ogj-Ow-Vbc" customClass="InfoVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c7M-EM-LUs">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pP5-v0-dOR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hakkında" image="info" selectedImage="info" id="5Gd-l5-HCh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4T5-Fd-V4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1243" y="-661"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="x5E-ep-4FN">
+            <objects>
+                <tabBarController id="KwC-OR-paq" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5B0-kY-FMd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KcO-aY-Gq1" kind="relationship" relationship="viewControllers" id="KSw-Au-XDF"/>
+                        <segue destination="hqg-gr-Q7q" kind="relationship" relationship="viewControllers" id="Fts-PD-c66"/>
+                        <segue destination="vj1-8m-ouN" kind="relationship" relationship="viewControllers" id="Fbd-Dz-kfW"/>
+                        <segue destination="Ogj-Ow-Vbc" kind="relationship" relationship="viewControllers" id="D43-rB-DXo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3X-9E-BZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1243" y="13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="character" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="epidose" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="info" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="location" width="42.666667938232422" height="42.666667938232422"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
