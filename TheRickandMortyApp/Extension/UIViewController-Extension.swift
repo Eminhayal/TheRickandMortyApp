@@ -9,6 +9,7 @@ import UIKit
 
 public enum StoryboardNames: String {
     case main = "Main"
+    case toDetailVC = "toDetail"
 }
 
 protocol StoryboardSettings {

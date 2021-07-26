@@ -8,18 +8,23 @@
 import Alamofire
 
 protocol JsonViewModelProtocol  {
-    func fetchAllCharacter(onSucces: ([Result]) -> Void , onFail: (String?) -> Void )
-    func success()
+    func fetchAllCharacter()
+    var delegate: JsonViewModelOutput? { get set }
 }
 
-class JsonViewModel {
+protocol JsonViewModelOutput : AnyObject {
+    func succes(items : [Result])
+}
+class JsonViewModel: JsonViewModelProtocol {
     
     var result : [Result]?
     var response: Character?
-    var reloadTableView: (() -> ())?
+    //var reloadTableView: (() -> ())?
+    
+    var delegate : JsonViewModelOutput?
     
     func fetchAllCharacter() {
-        AF.request(ServiceConstants.locationUrl)
+        AF.request(ServiceConstants.characterUrl)
           .validate()
           .responseDecodable(of: Character.self) { (response) in
             guard let character = response.value else  {return }
@@ -29,7 +34,8 @@ class JsonViewModel {
             //}
             
             self.response = character
-            self.reloadTableView?()
+            self.delegate?.succes(items: character.results)
+            //self.reloadTableView?()
         
         }
     }

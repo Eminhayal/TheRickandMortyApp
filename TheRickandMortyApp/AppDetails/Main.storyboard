@@ -53,9 +53,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VLS-NH-41o">
                                 <rect key="frame" x="0.0" y="110" width="390" height="651"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="651" id="qBl-1u-2yw"/>
-                                </constraints>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uFU-7R-gci">
                                 <rect key="frame" x="0.0" y="59" width="390" height="51"/>
@@ -68,14 +65,17 @@
                         <viewLayoutGuide key="safeArea" id="9IJ-8j-ug6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VLS-NH-41o" firstAttribute="leading" secondItem="9IJ-8j-ug6" secondAttribute="leading" id="30f-JX-G1t"/>
-                            <constraint firstItem="VLS-NH-41o" firstAttribute="trailing" secondItem="9IJ-8j-ug6" secondAttribute="trailing" id="9jz-Ms-lW4"/>
                             <constraint firstItem="uFU-7R-gci" firstAttribute="trailing" secondItem="9IJ-8j-ug6" secondAttribute="trailing" id="Adp-r7-WLp"/>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="trailing" secondItem="9IJ-8j-ug6" secondAttribute="trailing" id="C0f-Hg-ewr"/>
                             <constraint firstItem="uFU-7R-gci" firstAttribute="centerX" secondItem="9IJ-8j-ug6" secondAttribute="centerX" id="HcF-hH-rai"/>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="bottom" secondItem="9IJ-8j-ug6" secondAttribute="bottom" id="LDg-nm-Jyd"/>
                             <constraint firstItem="uFU-7R-gci" firstAttribute="leading" secondItem="9IJ-8j-ug6" secondAttribute="leading" id="Md1-ek-iWs"/>
-                            <constraint firstItem="VLS-NH-41o" firstAttribute="bottom" secondItem="9IJ-8j-ug6" secondAttribute="bottom" id="ZXh-sb-7Ng"/>
-                            <constraint firstItem="VLS-NH-41o" firstAttribute="centerX" secondItem="9IJ-8j-ug6" secondAttribute="centerX" id="aT5-7i-Pfg"/>
-                            <constraint firstItem="VLS-NH-41o" firstAttribute="top" secondItem="uFU-7R-gci" secondAttribute="bottom" id="cVm-ZP-lQL"/>
+                            <constraint firstItem="uFU-7R-gci" firstAttribute="centerX" secondItem="9IJ-8j-ug6" secondAttribute="centerX" id="QB8-FL-DSf"/>
+                            <constraint firstItem="9IJ-8j-ug6" firstAttribute="bottom" secondItem="uFU-7R-gci" secondAttribute="bottom" constant="651" id="ZHg-fW-6UK"/>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="top" secondItem="uFU-7R-gci" secondAttribute="bottom" id="cJX-rU-cV8"/>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="centerX" secondItem="9IJ-8j-ug6" secondAttribute="centerX" id="gu8-AL-mPv"/>
+                            <constraint firstItem="uFU-7R-gci" firstAttribute="top" secondItem="9IJ-8j-ug6" secondAttribute="top" constant="15" id="kfY-e3-hCg"/>
+                            <constraint firstItem="VLS-NH-41o" firstAttribute="leading" secondItem="9IJ-8j-ug6" secondAttribute="leading" id="tkH-Hj-7Mf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Karakterler" image="character" landscapeImage="character" id="42G-1J-Xsu">

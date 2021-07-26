@@ -8,5 +8,6 @@
 import Foundation
 
 final class ServiceConstants {
-    static var locationUrl = "https://rickandmortyapi.com/api/charecter"
+    static var characterUrl = "https://rickandmortyapi.com/api/character"
 }
+
