@@ -14,9 +14,8 @@ class CharacterVC: BaseVC {
     let jsonTableView = JsonTableView()
     var viewModel: JsonViewModelProtocol = JsonViewModel()
     
-    let detailVC = toDetailVC.instantiate(storyboard: .toDetailVC, bundle: nil, identifier: nil)
+    let detailVC = toDetailVC.instantiate(storyboard: .detail, bundle: nil, identifier: nil)
     let toDetailVM = ToDetailViewModel()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         characterTableView.delegate = jsonTableView
@@ -36,10 +35,11 @@ class CharacterVC: BaseVC {
 extension CharacterVC : JsonTableViewOutput {
     func onSelect(item: Result) {
         print(item.id)
-        
         self.toDetailVM.getItem(item: item)
         self.detailVC.toDetailVM = toDetailVM
-        navigationController?.pushViewController(detailVC, animated: true)
+        present(detailVC, animated: true, completion: nil)
+        
+        //navigationController?.pushViewController(detailVC, animated: true)
         /*let vc = UIViewController()
         let vm = asdds
         vm.item = item
