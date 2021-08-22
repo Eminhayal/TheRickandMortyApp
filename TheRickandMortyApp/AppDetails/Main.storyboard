@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="-1243" y="739"/>
         </scene>
-        <!--Karakterler-->
+        <!--CharacterVC-->
         <scene sceneID="jPY-m9-ohy">
             <objects>
                 <viewController storyboardIdentifier="CharacterVC" id="KcO-aY-Gq1" customClass="CharacterVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,7 +55,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uFU-7R-gci">
-                                <rect key="frame" x="0.0" y="59" width="390" height="51"/>
+                                <rect key="frame" x="0.0" y="103" width="390" height="7"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="GDV-2k-Sou"/>
                                 </constraints>
@@ -78,16 +78,14 @@
                             <constraint firstItem="VLS-NH-41o" firstAttribute="leading" secondItem="9IJ-8j-ug6" secondAttribute="leading" id="tkH-Hj-7Mf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Karakterler" image="character" landscapeImage="character" id="42G-1J-Xsu">
-                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="eau-yP-qFn"/>
                     <connections>
                         <outlet property="characterTableView" destination="VLS-NH-41o" id="sVy-sm-6ht"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EW-il-yRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-155.38461538461539" y="-331.27962085308053"/>
+            <point key="canvasLocation" x="773.84615384615381" y="-331.27962085308053"/>
         </scene>
         <!--Hakkında-->
         <scene sceneID="m78-ph-3nq">
@@ -116,7 +114,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KcO-aY-Gq1" kind="relationship" relationship="viewControllers" id="KSw-Au-XDF"/>
+                        <segue destination="kRx-Hj-cn4" kind="relationship" relationship="viewControllers" id="KSw-Au-XDF"/>
                         <segue destination="hqg-gr-Q7q" kind="relationship" relationship="viewControllers" id="Fts-PD-c66"/>
                         <segue destination="vj1-8m-ouN" kind="relationship" relationship="viewControllers" id="Fbd-Dz-kfW"/>
                         <segue destination="Ogj-Ow-Vbc" kind="relationship" relationship="viewControllers" id="D43-rB-DXo"/>
@@ -125,6 +123,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3X-9E-BZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1243" y="13"/>
+        </scene>
+        <!--Karakterler-->
+        <scene sceneID="Y0o-bC-Gu1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kRx-Hj-cn4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Karakterler" image="character" landscapeImage="character" id="42G-1J-Xsu">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S9F-pP-bAp">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KcO-aY-Gq1" kind="relationship" relationship="rootViewController" id="V0v-Hv-eVm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IU0-zL-YXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155.38461538461539" y="-331.27962085308053"/>
         </scene>
     </scenes>
     <resources>

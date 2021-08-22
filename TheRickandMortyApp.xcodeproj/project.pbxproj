@@ -168,8 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				FA1733AB26AD889C00E030DF /* Detail */,
-				FA7E4BDD26AC8A4F004F95A8 /* CharacterVC.swift */,
 				FA7E4BDF26AC8A66004F95A8 /* InfoVC.swift */,
+				FA1733B226AF58BB00E030DF /* Detail.storyboard */,
+				FA7E4BDD26AC8A4F004F95A8 /* CharacterVC.swift */,
 				FA7E4BE126AC8A79004F95A8 /* EpidoseVC.swift */,
 				FA7E4BE326AC8A8E004F95A8 /* LocationVC.swift */,
 				FA7E4BE526AC8BCC004F95A8 /* BaseVC.swift */,
@@ -180,8 +181,9 @@
 		FA0402ED26AB0423000136AD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FA1733AA26AD884F00E030DF /* View */,
 				FA7E4BF026ACB587004F95A8 /* Data */,
+				FA1733AA26AD884F00E030DF /* View */,
+				FA7E4BD526AC6EA3004F95A8 /* JsonViewModel.swift */,
 				FA7E4BE726ACA84F004F95A8 /* Cell */,
 			);
 			path = ViewModel;
@@ -198,7 +200,6 @@
 		FA1733AA26AD884F00E030DF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FA1733A426AD464400E030DF /* JsonTableView.swift */,
 				FA1733B026AD89C500E030DF /* ToDetailViewModel.swift */,
 			);
 			path = View;
@@ -208,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				FA1733AC26AD88CD00E030DF /* toDetailVC.swift */,
-				FA1733B226AF58BB00E030DF /* Detail.storyboard */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -216,6 +216,7 @@
 		FA7E4BE726ACA84F004F95A8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FA1733A426AD464400E030DF /* JsonTableView.swift */,
 				FA7E4BE826ACA880004F95A8 /* MyTableViewCell.swift */,
 				FA7E4BE926ACA880004F95A8 /* MyTableViewCell.xib */,
 			);
@@ -225,7 +226,6 @@
 		FA7E4BF026ACB587004F95A8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FA7E4BD526AC6EA3004F95A8 /* JsonViewModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";

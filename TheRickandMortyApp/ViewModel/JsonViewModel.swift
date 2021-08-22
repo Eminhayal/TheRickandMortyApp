@@ -10,12 +10,15 @@ import Alamofire
 protocol JsonViewModelProtocol  {
     func fetchAllCharacter()
     var delegate: JsonViewModelOutput? { get set }
+    var url: String { get set }
 }
 
 protocol JsonViewModelOutput : AnyObject {
     func succes(items : [Result])
 }
 class JsonViewModel: JsonViewModelProtocol {
+    var url: String = ServiceConstants.characterUrl
+    
     
     var result : [Result]?
     var response: Character?
@@ -24,7 +27,7 @@ class JsonViewModel: JsonViewModelProtocol {
     var delegate : JsonViewModelOutput?
     
     func fetchAllCharacter() {
-        AF.request(ServiceConstants.characterUrl)
+        AF.request(url)
           .validate()
           .responseDecodable(of: Character.self) { (response) in
             guard let character = response.value else  {return }

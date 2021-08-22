@@ -28,11 +28,29 @@ class toDetailVC: UIViewController, ToDetailViewOutput {
     var toDetailVM = ToDetailViewModel()
     let navVC = UINavigationController()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+        /*let vc = CharacterVC.instantiate(storyboard: .main, bundle: nil, identifier: nil)
+        let vm = JsonViewModel()
+        vm.url = toDetailVM.items?.location.url ?? ""
+        vc.viewModel = vm
+        self.navigationController?.pushViewController(vc, animated: true)
+        */
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+        navigationController?.navigationBar.isHidden = true
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         toDetailVM.delegate = self
         setScreenSize()
+        navigationController?.navigationBar.isHidden = false
+
         //setNavigation()
 
         
@@ -76,6 +94,7 @@ extension toDetailVC {
             //toDetailVM.items!.gender + "-" + toDetailVM.items!.species
         locationLabel.text = toDetailVM.items?.location.name
         locationEpidoseLabel.text = toDetailVM.items?.episode?.last
+        //tableview aç
         view.reloadInputViews()
         if toDetailVM.items?.status == "Alive" {
             aliveImage.image = UIImage(named: "alive")
