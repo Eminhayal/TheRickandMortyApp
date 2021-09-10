@@ -13,12 +13,15 @@ class CharacterVC: BaseVC {
     
     let jsonTableView = JsonTableView()
     var viewModel: JsonViewModelProtocol = JsonViewModel()
+    @IBOutlet weak var searchBar: UISearchBar!
     
     let toDetailVM = ToDetailViewModel()
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         characterTableView.delegate = jsonTableView
         characterTableView.dataSource = jsonTableView
+        
         jsonTableView.delegate = self
         viewModel.delegate = self
         characterTableView.register(MyTableViewCell.nibName, forCellReuseIdentifier: MyTableViewCell.identifier)
@@ -58,10 +61,10 @@ extension CharacterVC : JsonViewModelOutput{
         characterTableView.reloadData()
     }
     
-    
+    func getNewDatas(scrollView: UIScrollView) {
+
+    }
 }
-
-
 extension CharacterVC : ToDetailProtocol{
     func didTapMenuButton() {
         

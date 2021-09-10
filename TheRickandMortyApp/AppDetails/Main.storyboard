@@ -81,6 +81,7 @@
                     <navigationItem key="navigationItem" id="eau-yP-qFn"/>
                     <connections>
                         <outlet property="characterTableView" destination="VLS-NH-41o" id="sVy-sm-6ht"/>
+                        <outlet property="searchBar" destination="uFU-7R-gci" id="Zym-76-tfG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EW-il-yRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

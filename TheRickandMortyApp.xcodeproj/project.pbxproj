@@ -169,7 +169,6 @@
 			children = (
 				FA1733AB26AD889C00E030DF /* Detail */,
 				FA7E4BDF26AC8A66004F95A8 /* InfoVC.swift */,
-				FA1733B226AF58BB00E030DF /* Detail.storyboard */,
 				FA7E4BDD26AC8A4F004F95A8 /* CharacterVC.swift */,
 				FA7E4BE126AC8A79004F95A8 /* EpidoseVC.swift */,
 				FA7E4BE326AC8A8E004F95A8 /* LocationVC.swift */,
@@ -208,6 +207,7 @@
 		FA1733AB26AD889C00E030DF /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				FA1733B226AF58BB00E030DF /* Detail.storyboard */,
 				FA1733AC26AD88CD00E030DF /* toDetailVC.swift */,
 			);
 			path = Detail;

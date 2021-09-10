@@ -7,16 +7,18 @@
 
 import UIKit
 
+
 protocol JsonTableViewProtocol {
     func update( items : [Result] )
 }
 protocol JsonTableViewOutput : AnyObject {
     func  onSelect( item : Result )
+    func getNewDatas(scrollView: UIScrollView)
 }
 
-final class JsonTableView: NSObject , UITableViewDelegate , UITableViewDataSource {
+final class JsonTableView: NSObject , UITableViewDelegate , UITableViewDataSource  {
     private lazy var items : [Result] = []
-    
+   
     weak var delegate:JsonTableViewOutput?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,9 +37,11 @@ final class JsonTableView: NSObject , UITableViewDelegate , UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 202
     }
-
+    
+    
 }
 extension JsonTableView : JsonTableViewProtocol{
+    
     func update(items: [Result]) {
         self.items = items
     }
