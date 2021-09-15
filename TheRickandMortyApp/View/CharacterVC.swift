@@ -10,12 +10,12 @@ import UIKit
 class CharacterVC: BaseVC {
     
     @IBOutlet weak var characterTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     let jsonTableView = JsonTableView()
     var viewModel: JsonViewModelProtocol = JsonViewModel()
-    @IBOutlet weak var searchBar: UISearchBar!
-    
     let toDetailVM = ToDetailViewModel()
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class CharacterVC: BaseVC {
         characterTableView.dataSource = jsonTableView
         
         jsonTableView.delegate = self
+        
         viewModel.delegate = self
         characterTableView.register(MyTableViewCell.nibName, forCellReuseIdentifier: MyTableViewCell.identifier)
         viewModel.fetchAllCharacter()

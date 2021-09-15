@@ -9,21 +9,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bölümler-->
+        <!--EpisodeVC-->
         <scene sceneID="xgR-8S-wgy">
             <objects>
-                <viewController storyboardIdentifier="EpidoseVC" id="hqg-gr-Q7q" customClass="EpidoseVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EpisodeVC" id="hqg-gr-Q7q" customClass="EpisodeVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EuY-zC-o2a">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U24-fv-hGl">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3rj-Z3-aFM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3rj-Z3-aFM" firstAttribute="trailing" secondItem="U24-fv-hGl" secondAttribute="trailing" id="AUi-z8-WPK"/>
+                            <constraint firstItem="3rj-Z3-aFM" firstAttribute="bottom" secondItem="U24-fv-hGl" secondAttribute="bottom" id="RQK-ve-jtV"/>
+                            <constraint firstItem="U24-fv-hGl" firstAttribute="leading" secondItem="3rj-Z3-aFM" secondAttribute="leading" id="X10-z8-G2q"/>
+                            <constraint firstItem="U24-fv-hGl" firstAttribute="top" secondItem="3rj-Z3-aFM" secondAttribute="top" id="xh5-qd-G9e"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bölümler" image="epidose" selectedImage="epidose" id="MDh-4G-BXZ"/>
+                    <navigationItem key="navigationItem" id="AE7-0k-JMw"/>
+                    <connections>
+                        <outlet property="episodeTV" destination="U24-fv-hGl" id="F1e-0O-1le"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpQ-Nn-75b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-155" y="342"/>
+            <point key="canvasLocation" x="773.84615384615381" y="341.23222748815164"/>
         </scene>
         <!--Konumlar-->
         <scene sceneID="7tb-v9-8Ix">
@@ -80,7 +95,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eau-yP-qFn"/>
                     <connections>
-                        <outlet property="characterTableView" destination="VLS-NH-41o" id="sVy-sm-6ht"/>
+                        <outlet property="characterTableView" destination="VLS-NH-41o" id="fqx-jY-O2P"/>
                         <outlet property="searchBar" destination="uFU-7R-gci" id="Zym-76-tfG"/>
                     </connections>
                 </viewController>
@@ -116,7 +131,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="kRx-Hj-cn4" kind="relationship" relationship="viewControllers" id="KSw-Au-XDF"/>
-                        <segue destination="hqg-gr-Q7q" kind="relationship" relationship="viewControllers" id="Fts-PD-c66"/>
+                        <segue destination="K63-Uo-E7p" kind="relationship" relationship="viewControllers" id="Fts-PD-c66"/>
                         <segue destination="vj1-8m-ouN" kind="relationship" relationship="viewControllers" id="Fbd-Dz-kfW"/>
                         <segue destination="Ogj-Ow-Vbc" kind="relationship" relationship="viewControllers" id="D43-rB-DXo"/>
                     </connections>
@@ -145,6 +160,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IU0-zL-YXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-155.38461538461539" y="-331.27962085308053"/>
+        </scene>
+        <!--Bölümler-->
+        <scene sceneID="GKz-g9-DDI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K63-Uo-E7p" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bölümler" image="epidose" selectedImage="epidose" id="MDh-4G-BXZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qda-My-9Zw">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hqg-gr-Q7q" kind="relationship" relationship="rootViewController" id="F3Y-uM-x3o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCD-kE-xEX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155.38461538461539" y="341.94312796208527"/>
         </scene>
     </scenes>
     <resources>
