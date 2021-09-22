@@ -26,7 +26,7 @@ final class EpisodeTableView : NSObject , UITableViewDelegate , UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: EpisodeTableViewCell.identifier, for: indexPath) as! EpisodeTableViewCell
+       let cell = tableView.dequeueReusableCell(withIdentifier: EpisodeTableViewCell.identifier, for: indexPath) as! EpisodeTableViewCell
         cell.configure(data: items[indexPath.row])
         return cell
     }
@@ -36,7 +36,7 @@ final class EpisodeTableView : NSObject , UITableViewDelegate , UITableViewDataS
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 202
+        return 120
     }
 }
 

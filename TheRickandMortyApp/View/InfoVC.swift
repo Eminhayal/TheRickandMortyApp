@@ -9,21 +9,35 @@ import UIKit
 
 class InfoVC: BaseVC {
 
+   
+    @IBOutlet weak var linkedin: UIImageView!
+    @IBOutlet weak var github: UIImageView!
+    @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+    github.isUserInteractionEnabled = true
+    github.addGestureRecognizer(tapGestureRecognizer)
+    linkedin.isUserInteractionEnabled = true
+    linkedin.addGestureRecognizer(tapGestureRecognizer)
+        
     }
     
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let url = URL(string: "https://github.com/Eminhayal") {
+            UIApplication.shared.open(url)
+        }
+        if let url = URL(string: "https://www.linkedin.com/in/emin-hayal-779573151/") {
+            UIApplication.shared.open(url)
+        }
     }
-    */
-
+    
+    func imageUrl(imageView : UIImageView){
+        
+    }
 }

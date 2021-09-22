@@ -9,7 +9,6 @@ import UIKit
 
 class EpisodeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var deneme: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -17,7 +16,8 @@ class EpisodeTableViewCell: UITableViewCell {
 
 
     func configure(data : ResultEpisode){
-        deneme.text = data.episode
+        // nameLabel.text = data.name
+        // episodeLabel.text = data.episode
         print(data)
     }
     

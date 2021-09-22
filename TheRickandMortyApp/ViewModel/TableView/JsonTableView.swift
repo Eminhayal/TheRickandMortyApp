@@ -13,7 +13,7 @@ protocol JsonTableViewProtocol {
 }
 protocol JsonTableViewOutput : AnyObject {
     func  onSelect( item : Result )
-    func getNewDatas(scrollView: UIScrollView)
+    func getNewDatas()
 }
 
 final class JsonTableView: NSObject , UITableViewDelegate , UITableViewDataSource  {
@@ -28,6 +28,9 @@ final class JsonTableView: NSObject , UITableViewDelegate , UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.identifier, for: indexPath) as! MyTableViewCell
         cell.configure(data: items[indexPath.row])
+        if  (Double(indexPath.row) * 100) / (100 * Double(items.count)) > 0.8 {
+            delegate?.getNewDatas()
+        }
         return cell //MyTableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

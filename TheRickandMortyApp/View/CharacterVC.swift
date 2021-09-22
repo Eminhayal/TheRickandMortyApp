@@ -37,12 +37,17 @@ class CharacterVC: BaseVC {
 }
 
 extension CharacterVC : JsonTableViewOutput {
+    func getNewDatas() {
+        viewModel.getAnotherCharacters()
+    }
+    
     func onSelect(item: Result) {
         print(item.id)
         let detailVC = toDetailVC.instantiate(storyboard: .detail, bundle: nil, identifier: nil)
 
         self.toDetailVM.getItem(item: item)
         detailVC.toDetailVM = toDetailVM
+        //self.tabBarController?.navigationController?.pushViewController(detailVC, animated: true)
         self.navigationController?.pushViewController(detailVC, animated: true)
         //self.tabBarController?.tabBar.isHidden = true
         //present(detailVC, animated: true, completion: nil)

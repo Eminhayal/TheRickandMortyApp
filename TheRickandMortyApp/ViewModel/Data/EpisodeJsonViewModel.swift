@@ -19,7 +19,7 @@ protocol EpisodeJsonViewModelOutput : AnyObject {
 class EpisodeJsonViewModel: EpisodeJsonViewModelProtocol {
    
     
-    var url: String = ServiceConstants.characterUrl
+    var url: String = ServiceConstants.episodeUrl
     var result : [ResultEpisode]?
     var response: Episode?
     //var reloadTableView: (() -> ())?

@@ -9,22 +9,24 @@ import UIKit
 
 class EpisodeVC: BaseVC  {
     
-    @IBOutlet weak var episodeTV: UITableView!
+
+    @IBOutlet weak var episodeShowTableView: UITableView!
     
     let episodeTView = EpisodeTableView()
+    
     var viewModel: EpisodeJsonViewModelProtocol = EpisodeJsonViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        episodeTV.delegate = episodeTView
-        episodeTV.dataSource = episodeTView
+        episodeShowTableView.delegate = episodeTView
+        episodeShowTableView.dataSource = episodeTView
         
         episodeTView.delegate = self
         
         viewModel.delegate = self
         
-        episodeTV.register(EpisodeTableViewCell.nibName, forCellReuseIdentifier: EpisodeTableViewCell.identifier)
+        episodeShowTableView.register(EpisodeTableViewCell.nibName, forCellReuseIdentifier: EpisodeTableViewCell.identifier)
         viewModel.fetchAllEpisode()
         
         navigationController?.navigationBar.isHidden = true
@@ -48,7 +50,7 @@ extension EpisodeVC : EpisodeJsonTableViewOutput{
 extension EpisodeVC: EpisodeJsonViewModelOutput{
     func succes(items: [ResultEpisode]) {
         episodeTView.update(items: items)
-        episodeTV.reloadData()
+        episodeShowTableView.reloadData()
         
     }
     

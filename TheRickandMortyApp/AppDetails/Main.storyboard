@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KwC-OR-paq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KwC-OR-paq">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,29 +33,44 @@
                     </view>
                     <navigationItem key="navigationItem" id="AE7-0k-JMw"/>
                     <connections>
-                        <outlet property="episodeTV" destination="U24-fv-hGl" id="F1e-0O-1le"/>
+                        <outlet property="episodeShowTableView" destination="U24-fv-hGl" id="peE-K1-lOa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpQ-Nn-75b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773.84615384615381" y="341.23222748815164"/>
         </scene>
-        <!--Konumlar-->
+        <!--LocationVC-->
         <scene sceneID="7tb-v9-8Ix">
             <objects>
                 <viewController storyboardIdentifier="LocationVC" id="vj1-8m-ouN" customClass="LocationVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J0Z-yi-Ct7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pw6-LO-kwI">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GgR-Hl-Fag"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GgR-Hl-Fag" firstAttribute="trailing" secondItem="Pw6-LO-kwI" secondAttribute="trailing" id="8Bg-zJ-dgl"/>
+                            <constraint firstItem="Pw6-LO-kwI" firstAttribute="leading" secondItem="GgR-Hl-Fag" secondAttribute="leading" id="AYc-U4-6QP"/>
+                            <constraint firstItem="Pw6-LO-kwI" firstAttribute="top" secondItem="GgR-Hl-Fag" secondAttribute="top" id="aQx-q4-vXF"/>
+                            <constraint firstItem="GgR-Hl-Fag" firstAttribute="bottom" secondItem="Pw6-LO-kwI" secondAttribute="bottom" id="cEc-Mx-cQG"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Konumlar" image="location" selectedImage="location" id="K1p-Ma-6Jf"/>
+                    <navigationItem key="navigationItem" id="vEg-je-KrT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="locationTableViewShow" destination="Pw6-LO-kwI" id="sKk-0E-IEe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNL-em-8fu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1243" y="739"/>
+            <point key="canvasLocation" x="-313.84615384615381" y="1033.649289099526"/>
         </scene>
         <!--CharacterVC-->
         <scene sceneID="jPY-m9-ohy">
@@ -110,15 +125,78 @@
                     <view key="view" contentMode="scaleToFill" id="c7M-EM-LUs">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKx-gn-RnE">
+                                <rect key="frame" x="100" y="96" width="190" height="176"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="l4g-Q9-1vb"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQW-ns-vG7">
+                                <rect key="frame" x="70" y="369" width="251" height="208"/>
+                                <color key="backgroundColor" red="0.74225623200000002" green="1" blue="0.97039999740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Merhabalar Ben Emin,
+Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime olan ilgim lise çağlarımda başlamıştı. O yıllardan itibaren bilgilerimi sürekli güncelleme ihtiyacı hissettim. Bir arayışi içerisindeyken  Mobile uygulama geliştirme ilgimi çok çekti ve bu dala yöneldim. Kendimi iOS Konusunda ve iOS uygulamaları geliştirirken buldum.
+ </string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-wd-Sb1">
+                                <rect key="frame" x="237" y="628" width="53" height="53"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="o8I-PI-5Vi">
+                                <rect key="frame" x="100" y="628" width="53" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="lTp-N7-HGX"/>
+                                    <constraint firstAttribute="height" constant="53" id="uji-f8-cb1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emin Hayal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Oe-4R-LQR">
+                                <rect key="frame" x="144" y="291" width="102" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6d-YK-4CL">
+                                <rect key="frame" x="141" y="325" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pP5-v0-dOR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.74225623200000002" green="1" blue="0.97039999740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o8I-PI-5Vi" firstAttribute="top" secondItem="bQW-ns-vG7" secondAttribute="bottom" constant="51" id="3vl-yK-4ry"/>
+                            <constraint firstItem="9Oe-4R-LQR" firstAttribute="centerX" secondItem="S6d-YK-4CL" secondAttribute="centerX" id="5hF-LX-xff"/>
+                            <constraint firstItem="S6d-YK-4CL" firstAttribute="centerX" secondItem="bQW-ns-vG7" secondAttribute="centerX" id="8mS-oW-esw"/>
+                            <constraint firstItem="bQW-ns-vG7" firstAttribute="leading" secondItem="pP5-v0-dOR" secondAttribute="leading" constant="70" id="Blb-hl-7iU"/>
+                            <constraint firstItem="nKx-gn-RnE" firstAttribute="leading" secondItem="o8I-PI-5Vi" secondAttribute="leading" id="Fir-ED-zcJ"/>
+                            <constraint firstItem="nKx-gn-RnE" firstAttribute="top" secondItem="pP5-v0-dOR" secondAttribute="top" constant="52" id="GQ6-dK-FE2"/>
+                            <constraint firstItem="bQW-ns-vG7" firstAttribute="top" secondItem="S6d-YK-4CL" secondAttribute="bottom" constant="23" id="MhQ-xC-GE7"/>
+                            <constraint firstItem="nKx-gn-RnE" firstAttribute="trailing" secondItem="iMR-wd-Sb1" secondAttribute="trailing" id="Ncj-Ab-Lxz"/>
+                            <constraint firstItem="pP5-v0-dOR" firstAttribute="bottom" secondItem="o8I-PI-5Vi" secondAttribute="bottom" constant="80" id="QQc-M8-zek"/>
+                            <constraint firstItem="o8I-PI-5Vi" firstAttribute="bottom" secondItem="iMR-wd-Sb1" secondAttribute="bottom" id="RDB-IH-HXT"/>
+                            <constraint firstItem="o8I-PI-5Vi" firstAttribute="top" secondItem="iMR-wd-Sb1" secondAttribute="top" id="VQU-Ou-hzO"/>
+                            <constraint firstItem="nKx-gn-RnE" firstAttribute="centerX" secondItem="c7M-EM-LUs" secondAttribute="centerX" id="VhQ-di-Qka"/>
+                            <constraint firstItem="nKx-gn-RnE" firstAttribute="centerX" secondItem="9Oe-4R-LQR" secondAttribute="centerX" id="WkL-Ft-a6I"/>
+                            <constraint firstItem="nKx-gn-RnE" firstAttribute="leading" secondItem="pP5-v0-dOR" secondAttribute="leading" constant="100" id="bHz-NB-1GI"/>
+                            <constraint firstItem="iMR-wd-Sb1" firstAttribute="leading" secondItem="o8I-PI-5Vi" secondAttribute="trailing" constant="84" id="eNo-Wx-X4k"/>
+                            <constraint firstItem="S6d-YK-4CL" firstAttribute="top" secondItem="9Oe-4R-LQR" secondAttribute="bottom" constant="8" id="hKo-hd-m7H"/>
+                            <constraint firstItem="S6d-YK-4CL" firstAttribute="leading" secondItem="pP5-v0-dOR" secondAttribute="leading" constant="141" id="maX-Jc-Bya"/>
+                            <constraint firstItem="9Oe-4R-LQR" firstAttribute="top" secondItem="nKx-gn-RnE" secondAttribute="bottom" constant="19" id="qgF-sz-efz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hakkında" image="info" selectedImage="info" id="5Gd-l5-HCh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="github" destination="o8I-PI-5Vi" id="mXA-23-8O9"/>
+                        <outlet property="image" destination="nKx-gn-RnE" id="Aal-8z-R5w"/>
+                        <outlet property="linkedin" destination="iMR-wd-Sb1" id="rKG-tZ-3fP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4T5-Fd-V4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1243" y="-661"/>
+            <point key="canvasLocation" x="-1243" y="-1035"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="x5E-ep-4FN">
@@ -132,7 +210,7 @@
                     <connections>
                         <segue destination="kRx-Hj-cn4" kind="relationship" relationship="viewControllers" id="KSw-Au-XDF"/>
                         <segue destination="K63-Uo-E7p" kind="relationship" relationship="viewControllers" id="Fts-PD-c66"/>
-                        <segue destination="vj1-8m-ouN" kind="relationship" relationship="viewControllers" id="Fbd-Dz-kfW"/>
+                        <segue destination="vaO-iy-4UE" kind="relationship" relationship="viewControllers" id="Fbd-Dz-kfW"/>
                         <segue destination="Ogj-Ow-Vbc" kind="relationship" relationship="viewControllers" id="D43-rB-DXo"/>
                     </connections>
                 </tabBarController>
@@ -180,12 +258,34 @@
             </objects>
             <point key="canvasLocation" x="-155.38461538461539" y="341.94312796208527"/>
         </scene>
+        <!--Konumlar-->
+        <scene sceneID="p2Q-db-NOI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vaO-iy-4UE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Konumlar" image="location" selectedImage="location" id="K1p-Ma-6Jf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Rs-22-uy7">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vj1-8m-ouN" kind="relationship" relationship="rootViewController" id="g0f-dP-V5V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isM-m0-liS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1243.0769230769231" y="1033.649289099526"/>
+        </scene>
     </scenes>
     <resources>
         <image name="character" width="42.666667938232422" height="42.666667938232422"/>
         <image name="epidose" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="github" width="21.333333969116211" height="21.333333969116211"/>
         <image name="info" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="linkedin" width="21.333333969116211" height="21.333333969116211"/>
         <image name="location" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="me" width="323.33334350585938" height="432"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
