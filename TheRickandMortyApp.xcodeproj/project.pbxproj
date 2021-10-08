@@ -35,6 +35,8 @@
 		FA7E4BEA26ACA880004F95A8 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E4BE826ACA880004F95A8 /* MyTableViewCell.swift */; };
 		FA7E4BEB26ACA880004F95A8 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7E4BE926ACA880004F95A8 /* MyTableViewCell.xib */; };
 		FA7E4BEF26ACAF14004F95A8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E4BEE26ACAF14004F95A8 /* String+Extension.swift */; };
+		FAE4D56426FBCE9E006D81A2 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4D56326FBCE9E006D81A2 /* SwiftSpinner.swift */; };
+		FAE4D56626FCD353006D81A2 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4D56526FCD352006D81A2 /* TabbarController.swift */; };
 		FAEA807E26EE49CA0033DBC2 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA807C26EE49CA0033DBC2 /* EpisodeTableViewCell.swift */; };
 		FAEA807F26EE49CA0033DBC2 /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEA807D26EE49CA0033DBC2 /* EpisodeTableViewCell.xib */; };
 		FAEA808526EE4C3E0033DBC2 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA808426EE4C3E0033DBC2 /* Episode.swift */; };
@@ -56,7 +58,7 @@
 		FA0402D126AB01B5000136AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA0402D326AB01B5000136AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA0402DB26AB01B5000136AD /* TheRickandMortyApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheRickandMortyApp.xcdatamodel; sourceTree = "<group>"; };
-		FA0402DD26AB01BA000136AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA0402DD26AB01BA000136AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = TheRickandMortyApp/AppDetails/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		FA0402E026AB01BA000136AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0402E226AB01BA000136AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1733A426AD464400E030DF /* JsonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTableView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,8 @@
 		FA7E4BE826ACA880004F95A8 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		FA7E4BE926ACA880004F95A8 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		FA7E4BEE26ACAF14004F95A8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FAE4D56326FBCE9E006D81A2 /* SwiftSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		FAE4D56526FCD352006D81A2 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		FAEA807C26EE49CA0033DBC2 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		FAEA807D26EE49CA0033DBC2 /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
 		FAEA808426EE4C3E0033DBC2 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
@@ -143,10 +147,9 @@
 		FA0402D026AB01B5000136AD /* TheRickandMortyApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA0402E826AB0388000136AD /* Service */,
+				FAB3EF37270730BC003E01B6 /* UI */,
 				FA0402EE26AB042B000136AD /* Model */,
-				FA0402ED26AB0423000136AD /* ViewModel */,
-				FA0402EC26AB041D000136AD /* View */,
+				FA0402ED26AB0423000136AD /* CustomUI */,
 				FA0402EB26AB0414000136AD /* Resource */,
 				FA0402EA26AB040C000136AD /* Extension */,
 				FA0402E926AB03E5000136AD /* AppDetails */,
@@ -154,13 +157,6 @@
 				FA0402DA26AB01B5000136AD /* TheRickandMortyApp.xcdatamodeld */,
 			);
 			path = TheRickandMortyApp;
-			sourceTree = "<group>";
-		};
-		FA0402E826AB0388000136AD /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		FA0402E926AB03E5000136AD /* AppDetails */ = {
@@ -193,28 +189,13 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		FA0402EC26AB041D000136AD /* View */ = {
+		FA0402ED26AB0423000136AD /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
-				FA1733AB26AD889C00E030DF /* DetailOfCharacter */,
-				FA7E4BDF26AC8A66004F95A8 /* InfoVC.swift */,
-				FAEA808B26F0D06A0033DBC2 /* EpisodeVC.swift */,
-				FA7E4BDD26AC8A4F004F95A8 /* CharacterVC.swift */,
-				FA7E4BE326AC8A8E004F95A8 /* LocationVC.swift */,
-				FA7E4BE526AC8BCC004F95A8 /* BaseVC.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FA0402ED26AB0423000136AD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				FA7E4BF026ACB587004F95A8 /* Data */,
-				FA1733AA26AD884F00E030DF /* View */,
-				FAEA808626EE4F590033DBC2 /* TableView */,
+				FAE4D56226FBCE5E006D81A2 /* Indicator */,
 				FA7E4BE726ACA84F004F95A8 /* Cell */,
 			);
-			path = ViewModel;
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 		FA0402EE26AB042B000136AD /* Model */ = {
@@ -227,23 +208,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FA1733AA26AD884F00E030DF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FA1733B026AD89C500E030DF /* ToDetailViewModel.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FA1733AB26AD889C00E030DF /* DetailOfCharacter */ = {
-			isa = PBXGroup;
-			children = (
-				FA1733B226AF58BB00E030DF /* Detail.storyboard */,
-				FA1733AC26AD88CD00E030DF /* toDetailVC.swift */,
-			);
-			path = DetailOfCharacter;
-			sourceTree = "<group>";
-		};
 		FA7E4BE726ACA84F004F95A8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,14 +218,74 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		FA7E4BF026ACB587004F95A8 /* Data */ = {
+		FAB3EF362707309B003E01B6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FA1733A426AD464400E030DF /* JsonTableView.swift */,
 				FA7E4BD526AC6EA3004F95A8 /* JsonViewModel.swift */,
-				FAEA808926EE6DB30033DBC2 /* EpisodeJsonViewModel.swift */,
-				FA000F3726F614D900EA0917 /* LocationJsonViewModel.swift */,
+				FA7E4BDD26AC8A4F004F95A8 /* CharacterVC.swift */,
 			);
-			path = Data;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FAB3EF37270730BC003E01B6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3EF3B2707310E003E01B6 /* CharecterDetail */,
+				FAB3EF3A270730F7003E01B6 /* Location */,
+				FAB3EF39270730E5003E01B6 /* Info */,
+				FA7E4BE526AC8BCC004F95A8 /* BaseVC.swift */,
+				FAE4D56526FCD352006D81A2 /* TabbarController.swift */,
+				FAB3EF38270730CC003E01B6 /* Episodes */,
+				FAB3EF362707309B003E01B6 /* Home */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FAB3EF38270730CC003E01B6 /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				FAEA808B26F0D06A0033DBC2 /* EpisodeVC.swift */,
+				FAEA808926EE6DB30033DBC2 /* EpisodeJsonViewModel.swift */,
+				FAEA808726EE4F940033DBC2 /* EpisodeTableView.swift */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		FAB3EF39270730E5003E01B6 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				FA7E4BDF26AC8A66004F95A8 /* InfoVC.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		FAB3EF3A270730F7003E01B6 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				FA000F3726F614D900EA0917 /* LocationJsonViewModel.swift */,
+				FA7E4BE326AC8A8E004F95A8 /* LocationVC.swift */,
+				FA000F3526F613F800EA0917 /* LocationTableView.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		FAB3EF3B2707310E003E01B6 /* CharecterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FA1733B226AF58BB00E030DF /* Detail.storyboard */,
+				FA1733AC26AD88CD00E030DF /* toDetailVC.swift */,
+				FA1733B026AD89C500E030DF /* ToDetailViewModel.swift */,
+			);
+			path = CharecterDetail;
+			sourceTree = "<group>";
+		};
+		FAE4D56226FBCE5E006D81A2 /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				FAE4D56326FBCE9E006D81A2 /* SwiftSpinner.swift */,
+			);
+			path = Indicator;
 			sourceTree = "<group>";
 		};
 		FAEA807626EE485E0033DBC2 /* EpidoseTableViewCell */ = {
@@ -280,16 +304,6 @@
 				FA7E4BE826ACA880004F95A8 /* MyTableViewCell.swift */,
 			);
 			path = CharacterTableViewCell;
-			sourceTree = "<group>";
-		};
-		FAEA808626EE4F590033DBC2 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				FA1733A426AD464400E030DF /* JsonTableView.swift */,
-				FAEA808726EE4F940033DBC2 /* EpisodeTableView.swift */,
-				FA000F3526F613F800EA0917 /* LocationTableView.swift */,
-			);
-			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +335,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					FA0402CD26AB01B5000136AD = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -423,9 +437,11 @@
 				FAEA808C26F0D06A0033DBC2 /* EpisodeVC.swift in Sources */,
 				FA7E4BE626AC8BCC004F95A8 /* BaseVC.swift in Sources */,
 				FAEA808A26EE6DB30033DBC2 /* EpisodeJsonViewModel.swift in Sources */,
+				FAE4D56626FCD353006D81A2 /* TabbarController.swift in Sources */,
 				FA1733B126AD89C500E030DF /* ToDetailViewModel.swift in Sources */,
 				FA7E4BD826AC7216004F95A8 /* Character.swift in Sources */,
 				FA000F3826F614D900EA0917 /* LocationJsonViewModel.swift in Sources */,
+				FAE4D56426FBCE9E006D81A2 /* SwiftSpinner.swift in Sources */,
 				FA0402D426AB01B5000136AD /* SceneDelegate.swift in Sources */,
 				FA7E4BEF26ACAF14004F95A8 /* String+Extension.swift in Sources */,
 				FA7E4BE426AC8A8E004F95A8 /* LocationVC.swift in Sources */,
@@ -504,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -559,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -573,16 +589,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 667434C0A46C8EA98FA616FB /* Pods-TheRickandMortyApp.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon2;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y9N6MZS2UR;
+				DEVELOPMENT_TEAM = ZUBBCB62N3;
 				INFOPLIST_FILE = TheRickandMortyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eminhayal.TheRickandMortyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eminhayal.RickandMortyApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -593,16 +610,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1364F329014B3DC2FF9EF0D7 /* Pods-TheRickandMortyApp.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon2;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y9N6MZS2UR;
+				DEVELOPMENT_TEAM = ZUBBCB62N3;
 				INFOPLIST_FILE = TheRickandMortyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eminhayal.TheRickandMortyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eminhayal.RickandMortyApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

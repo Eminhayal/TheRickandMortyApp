@@ -9,14 +9,14 @@ import Foundation
 
 // MARK: - Location
 struct Locations : Codable {
-    let info: LocationInfo
-    let results: [LocationResult]
+    var info: LocationInfo
+    var results: [LocationResult]
 }
 
 // MARK: - Info
 struct LocationInfo: Codable {
     let count, pages: Int
-    let next: String
+    var next: String
     let prev: String?
 }
 

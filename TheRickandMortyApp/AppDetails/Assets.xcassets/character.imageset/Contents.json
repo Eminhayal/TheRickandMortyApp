@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "character.png",
+      "filename" : "charac.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "character-1.png",
+      "filename" : "2528002_artist_avatar_character_people_professor_icon kopyası.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "character-2.png",
+      "filename" : "2528002_artist_avatar_character_people_professor_icon-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

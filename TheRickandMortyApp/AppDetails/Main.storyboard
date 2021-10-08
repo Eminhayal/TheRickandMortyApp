@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KwC-OR-paq">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="EpisodeVC" id="hqg-gr-Q7q" customClass="EpisodeVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EuY-zC-o2a">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U24-fv-hGl">
-                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -45,11 +45,11 @@
             <objects>
                 <viewController storyboardIdentifier="LocationVC" id="vj1-8m-ouN" customClass="LocationVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J0Z-yi-Ct7">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pw6-LO-kwI">
-                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -77,15 +77,15 @@
             <objects>
                 <viewController storyboardIdentifier="CharacterVC" id="KcO-aY-Gq1" customClass="CharacterVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QvK-eF-PYN">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VLS-NH-41o">
-                                <rect key="frame" x="0.0" y="110" width="390" height="651"/>
+                                <rect key="frame" x="0.0" y="154" width="375" height="575"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uFU-7R-gci">
-                                <rect key="frame" x="0.0" y="103" width="390" height="7"/>
+                                <rect key="frame" x="0.0" y="103" width="375" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="GDV-2k-Sou"/>
                                 </constraints>
@@ -109,6 +109,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eau-yP-qFn"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="characterTableView" destination="VLS-NH-41o" id="fqx-jY-O2P"/>
                         <outlet property="searchBar" destination="uFU-7R-gci" id="Zym-76-tfG"/>
@@ -123,17 +124,17 @@
             <objects>
                 <viewController storyboardIdentifier="InfoVC" id="Ogj-Ow-Vbc" customClass="InfoVC" customModule="TheRickandMortyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7M-EM-LUs">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKx-gn-RnE">
-                                <rect key="frame" x="100" y="96" width="190" height="176"/>
+                                <rect key="frame" x="100" y="96" width="175" height="176"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="176" id="l4g-Q9-1vb"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQW-ns-vG7">
-                                <rect key="frame" x="70" y="369" width="251" height="208"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQW-ns-vG7">
+                                <rect key="frame" x="40" y="369" width="295" height="176"/>
                                 <color key="backgroundColor" red="0.74225623200000002" green="1" blue="0.97039999740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Merhabalar Ben Emin,
 Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime olan ilgim lise çağlarımda başlamıştı. O yıllardan itibaren bilgilerimi sürekli güncelleme ihtiyacı hissettim. Bir arayışi içerisindeyken  Mobile uygulama geliştirme ilgimi çok çekti ve bu dala yöneldim. Kendimi iOS Konusunda ve iOS uygulamaları geliştirirken buldum.
@@ -143,23 +144,25 @@ Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime ola
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-wd-Sb1">
-                                <rect key="frame" x="237" y="628" width="53" height="53"/>
+                                <rect key="frame" x="237" y="596" width="38" height="53"/>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="o8I-PI-5Vi">
-                                <rect key="frame" x="100" y="628" width="53" height="53"/>
+                                <rect key="frame" x="100" y="596" width="53" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="lTp-N7-HGX"/>
                                     <constraint firstAttribute="height" constant="53" id="uji-f8-cb1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emin Hayal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Oe-4R-LQR">
-                                <rect key="frame" x="144" y="291" width="102" height="26"/>
+                                <rect key="frame" x="0.0" y="291" width="375" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6d-YK-4CL">
-                                <rect key="frame" x="141" y="325" width="109" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6d-YK-4CL">
+                                <rect key="frame" x="0.0" y="325" width="375" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -167,12 +170,14 @@ Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime ola
                         <color key="backgroundColor" red="0.74225623200000002" green="1" blue="0.97039999740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="o8I-PI-5Vi" firstAttribute="top" secondItem="bQW-ns-vG7" secondAttribute="bottom" constant="51" id="3vl-yK-4ry"/>
+                            <constraint firstItem="bQW-ns-vG7" firstAttribute="leading" secondItem="pP5-v0-dOR" secondAttribute="leading" constant="40" id="5FT-wk-USa"/>
                             <constraint firstItem="9Oe-4R-LQR" firstAttribute="centerX" secondItem="S6d-YK-4CL" secondAttribute="centerX" id="5hF-LX-xff"/>
+                            <constraint firstItem="pP5-v0-dOR" firstAttribute="trailing" secondItem="bQW-ns-vG7" secondAttribute="trailing" constant="40" id="6L8-g1-r6o"/>
                             <constraint firstItem="S6d-YK-4CL" firstAttribute="centerX" secondItem="bQW-ns-vG7" secondAttribute="centerX" id="8mS-oW-esw"/>
-                            <constraint firstItem="bQW-ns-vG7" firstAttribute="leading" secondItem="pP5-v0-dOR" secondAttribute="leading" constant="70" id="Blb-hl-7iU"/>
                             <constraint firstItem="nKx-gn-RnE" firstAttribute="leading" secondItem="o8I-PI-5Vi" secondAttribute="leading" id="Fir-ED-zcJ"/>
                             <constraint firstItem="nKx-gn-RnE" firstAttribute="top" secondItem="pP5-v0-dOR" secondAttribute="top" constant="52" id="GQ6-dK-FE2"/>
                             <constraint firstItem="bQW-ns-vG7" firstAttribute="top" secondItem="S6d-YK-4CL" secondAttribute="bottom" constant="23" id="MhQ-xC-GE7"/>
+                            <constraint firstItem="pP5-v0-dOR" firstAttribute="trailing" secondItem="S6d-YK-4CL" secondAttribute="trailing" id="MyW-DI-JP1"/>
                             <constraint firstItem="nKx-gn-RnE" firstAttribute="trailing" secondItem="iMR-wd-Sb1" secondAttribute="trailing" id="Ncj-Ab-Lxz"/>
                             <constraint firstItem="pP5-v0-dOR" firstAttribute="bottom" secondItem="o8I-PI-5Vi" secondAttribute="bottom" constant="80" id="QQc-M8-zek"/>
                             <constraint firstItem="o8I-PI-5Vi" firstAttribute="bottom" secondItem="iMR-wd-Sb1" secondAttribute="bottom" id="RDB-IH-HXT"/>
@@ -182,8 +187,10 @@ Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime ola
                             <constraint firstItem="nKx-gn-RnE" firstAttribute="leading" secondItem="pP5-v0-dOR" secondAttribute="leading" constant="100" id="bHz-NB-1GI"/>
                             <constraint firstItem="iMR-wd-Sb1" firstAttribute="leading" secondItem="o8I-PI-5Vi" secondAttribute="trailing" constant="84" id="eNo-Wx-X4k"/>
                             <constraint firstItem="S6d-YK-4CL" firstAttribute="top" secondItem="9Oe-4R-LQR" secondAttribute="bottom" constant="8" id="hKo-hd-m7H"/>
-                            <constraint firstItem="S6d-YK-4CL" firstAttribute="leading" secondItem="pP5-v0-dOR" secondAttribute="leading" constant="141" id="maX-Jc-Bya"/>
+                            <constraint firstItem="S6d-YK-4CL" firstAttribute="leading" secondItem="pP5-v0-dOR" secondAttribute="leading" id="jMu-A9-HIP"/>
+                            <constraint firstItem="pP5-v0-dOR" firstAttribute="trailing" secondItem="9Oe-4R-LQR" secondAttribute="trailing" id="nza-4v-02m"/>
                             <constraint firstItem="9Oe-4R-LQR" firstAttribute="top" secondItem="nKx-gn-RnE" secondAttribute="bottom" constant="19" id="qgF-sz-efz"/>
+                            <constraint firstItem="9Oe-4R-LQR" firstAttribute="leading" secondItem="pP5-v0-dOR" secondAttribute="leading" id="xHS-GW-LcH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hakkında" image="info" selectedImage="info" id="5Gd-l5-HCh"/>
@@ -196,7 +203,7 @@ Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime ola
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4T5-Fd-V4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1243" y="-1035"/>
+            <point key="canvasLocation" x="-1243.0769230769231" y="-1035.0710900473932"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="x5E-ep-4FN">
@@ -222,12 +229,14 @@ Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime ola
         <scene sceneID="Y0o-bC-Gu1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kRx-Hj-cn4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Karakterler" image="character" landscapeImage="character" id="42G-1J-Xsu">
-                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <tabBarItem key="tabBarItem" title="Karakterler" image="character" selectedImage="character" id="42G-1J-Xsu">
+                        <color key="badgeColor" systemColor="systemRedColor"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
                     </tabBarItem>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S9F-pP-bAp">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -246,7 +255,7 @@ Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime ola
                     <tabBarItem key="tabBarItem" title="Bölümler" image="epidose" selectedImage="epidose" id="MDh-4G-BXZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qda-My-9Zw">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -265,7 +274,7 @@ Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime ola
                     <tabBarItem key="tabBarItem" title="Konumlar" image="location" selectedImage="location" id="K1p-Ma-6Jf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Rs-22-uy7">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -279,15 +288,18 @@ Konya Teknik Üniversitesi Bilgisayar Programcılığı mezunuyum.Mesleğime ola
         </scene>
     </scenes>
     <resources>
-        <image name="character" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="epidose" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="character" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="epidose" width="21.333333969116211" height="21.333333969116211"/>
         <image name="github" width="21.333333969116211" height="21.333333969116211"/>
-        <image name="info" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="info" width="21.333333969116211" height="21.333333969116211"/>
         <image name="linkedin" width="21.333333969116211" height="21.333333969116211"/>
-        <image name="location" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="location" width="21.333333969116211" height="21.333333969116211"/>
         <image name="me" width="323.33334350585938" height="432"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

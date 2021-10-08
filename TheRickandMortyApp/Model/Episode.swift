@@ -9,14 +9,14 @@ import Foundation
 
 // MARK: - Episode
 struct Episode: Codable {
-    let info: InfoPage
-    let results: [ResultEpisode]
+    var info: InfoPage
+    var results: [ResultEpisode]
 }
 
 // MARK: - Info
 struct InfoPage: Codable {
     let count, pages: Int
-    let next: String
+    var next: String
 }
 
 // MARK: - Result
